@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${POSTGRES_URL:jdbc:postgresql://localhost:5432/parking_db}
+    type: com.zaxxer.hikari.HikariDataSource
+    username: ${POSTGRES_USER:parking_user}
+    password: ${POSTGRES_PASSWORD:parking_password}
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    show-sql: false
