@@ -32,6 +32,7 @@ public class VehicleService {
 
     @Transactional
     public VehicleEntity createVehicleForASpecificCity(CityDTO cityDTO) {
+        //TODO validate city code
         Optional<CityEntity> city = cityRepository.findCityEntityByCode(cityDTO.getCode());
 
         if(city.isPresent()){
